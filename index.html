@@ -11,26 +11,26 @@
 <body>
     <div id="container">
         <h1 id="site-title">Student Grade Table</h1>
-        <table id="table-container">
+        <table id="table-container" class="table table-striped table-dark">
             <thead>
                 <tr id="table-headers" class="table-row">
-                    <th class="table-item">Student Name</th>
-                    <th class="table-item">Course</th>
-                    <th class="table-item">Grade</th>
+                    <th scope="col" class="table-item">Student Name</th>
+                    <th scope="col" class="table-item">Course</th>
+                    <th scope="col" class="table-item">Grade</th>
                 </tr>
             </thead>
             <tbody id="table-body-container">
-                <tr class="table-row">
+                <tr class="table-row" scope="row">
                     <td class="table-item">Tim Berners-Lee</td>
                     <td class="table-item course">Wed Development</td>
                     <td class="table-item grade">100</td>
                 </tr>
-                <tr class="table-row">
+                <tr class="table-row" scope="row">
                     <td class="table-item">Scott Bowler</td>
                     <td class="table-item course">Wed Development</td>
                     <td class="table-item grade">100</td>
                 </tr>
-                <tr class="table-row">
+                <tr class="table-row" scope="row">
                     <td class="table-item">Tim Davis</td>
                     <td class="table-item course">Wed Development</td>
                     <td class="table-item grade">50</td>
