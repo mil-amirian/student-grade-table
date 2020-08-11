@@ -1,0 +1,60 @@
+/* 
+font-family: 'Nova Mono', monospace;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table,
+th,
+td {
+  border: 1px solid grey;
+}
+
+tr:nth-child(even) {
+    background: #cccccc;
+  }
+tr:nth-child(odd) {
+    background: #ffffff;
+}
+table {
+    max-width: 900px;
+}
+
+#table-headers {
+    background-color: greenyellow;
+}
+
+.table-item {
+    padding:0.5rem 1rem;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.table-row {
+    padding-left: 2rem;
+}
+
+#site-title {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin: 2rem;
+}
+
+.grade {
+    font-family: 'Nova Mono', monospace;
+    text-align: center;
+}
+
