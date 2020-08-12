@@ -38,7 +38,7 @@ table {
 }
 
 .headers {
-    width: 900px;
+    /* width: 900px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,3 +64,28 @@ table {
     font-family: 'Nova Mono', monospace;
 }
 
+.input-group {
+    margin: 1rem 0;
+}
+
+.btn-light {
+    border: solid 1px grey;
+}
+
+.table-row {
+    width: 90vw;
+}
+
+#buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group-text {
+    background-color: greenyellow;
+}
+
+.btn-secondary {
+    width: 25%;
+}
