@@ -5,38 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&family=Playfair+Display:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Student Grade Table</title>
 </head>
 <body>
-    <div id="container">
-        <h1 id="site-title">Student Grade Table</h1>
-        <table id="table-container" class="table table-striped table-dark">
-            <thead>
-                <tr id="table-headers" class="table-row">
-                    <th scope="col" class="table-item">Student Name</th>
-                    <th scope="col" class="table-item">Course</th>
-                    <th scope="col" class="table-item">Grade</th>
-                </tr>
-            </thead>
-            <tbody id="table-body-container">
-                <tr class="table-row" scope="row">
-                    <td class="table-item">Tim Berners-Lee</td>
-                    <td class="table-item course">Wed Development</td>
-                    <td class="table-item grade">100</td>
-                </tr>
-                <tr class="table-row" scope="row">
-                    <td class="table-item">Scott Bowler</td>
-                    <td class="table-item course">Wed Development</td>
-                    <td class="table-item grade">100</td>
-                </tr>
-                <tr class="table-row" scope="row">
-                    <td class="table-item">Tim Davis</td>
-                    <td class="table-item course">Wed Development</td>
-                    <td class="table-item grade">50</td>
-                </tr>
-            </tbody>
-        </table>
+    <div id="container" class="container">
+        <div class="headers">
+            <h1 id="site-title">Student Grade Table</h1>
+            <div class="average-grade">
+                <h2 class="header">Average Grade<span class="badge badge-secondary avg-grade"></span></h2>
+              </div>
+        </div>
+        <div class="table-row row">
+            <table id="table-container" class="table table-striped table-dark col-8">
+                <thead>
+                    <tr id="table-headers" class="table-row">
+                        <th scope="col" class="table-item">Student Name</th>
+                        <th scope="col" class="table-item">Course</th>
+                        <th scope="col" class="table-item">Grade</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body-container">
+                </tbody>
+            </table>
+            <form action="POST">
+                <div class="form-input col-12">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-user" aria-hidden="true">
+                                </i>
+                            </div>
+                        </div>
+                        <input name="name" type="text" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-list-alt" aria-hidden="true">
+                                </i>
+                            </div>
+                        </div>
+                        <input name="course" type="text" class="form-control" placeholder="Course">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <i class="fa fa-graduation-cap" aria-hidden="true">
+                                </i>
+                            </div>
+                        </div>
+                        <input name="grade" type="number" class="form-control" placeholder="Grade">
+                    </div>
+                    <div id="buttons">
+                        <button type="submit" class="btn btn-secondary">Add</button>
+                        <button type="reset" class="btn btn-light">Cancel</button>
+                    </div>
+            </form>
+
+
+            </div>
+        </div>
+        
+        
     </div>
     
 
@@ -45,6 +77,8 @@
     src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous"></script>
+    <script src="components/grade-form.js"></script>
+    <script src="components/page-header.js"></script>
     <script src="components/app.js"></script>
     <script src="components/grade-tables.js"></script>
     <script src="components/main.js"></script>
