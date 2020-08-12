@@ -38,7 +38,7 @@ table {
 }
 
 .headers {
-    /* width: 900px; */
+    width: 80vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,7 +73,7 @@ table {
 }
 
 .table-row {
-    width: 90vw;
+    width: 80vw;
 }
 
 #buttons {
@@ -89,3 +89,12 @@ table {
 .btn-secondary {
     width: 25%;
 }
+
+form {
+    margin-left: 2rem;
+}
+
+.header {
+    margin-right: 1.8rem;
+}
+
