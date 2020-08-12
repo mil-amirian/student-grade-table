@@ -27,12 +27,40 @@ table {
 }
 
 #site-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     margin: 2rem;
+    margin-left: 0;
 }
 
 .grade {
+    font-family: 'Nova Mono', monospace;
+}
+
+.headers {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+}
+
+.average-grade {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.avg-grade {
+
+    background-color: #3e444a;
+    margin-left: 1rem;
+    border-radius: 10px;
+    color: greenyellow;
+    font-size: 30px;
+    text-align: center;
+    padding: 0.5rem;
     font-family: 'Nova Mono', monospace;
 }
 
