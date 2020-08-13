@@ -27,10 +27,9 @@ table {
 }
 
 #site-title {
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    margin: 2rem;
-    margin-left: 0;
+    justify-content: center;
+    width: 100vw;
+    text-align: left;
 }
 
 .grade {
@@ -43,12 +42,13 @@ table {
     justify-content: space-between;
     align-items: center;
     padding-left: 0;
+    border-bottom: solid 2px lightgray;
+    margin: 2rem 0;
 }
 
-.average-grade {
+.average-grade, .title {
     display: flex;
-    padding: 1rem;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -90,12 +90,25 @@ table {
     width: 25%;
 }
 
-/* form {
-    margin-left: 2rem;
-} */
+form {
+    margin-left: 0rem;
+}
 
 .header {
-    margin-right: 1.8rem;
+    text-align: right;
+    /* margin-right: 1.8rem; */
+}
+
+@media screen and (max-width: 994px) {
+    #site-title {
+        justify-content: center;
+        width: 100vw;
+        text-align: center;
+    }
+    .average-grade{
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .hidden {
