@@ -1,19 +1,35 @@
 class GradeTable {
-    constructor(tableElement) {
+    constructor(tableElement, noGradesElement) {
         this.tableElement = tableElement
+        this.noGradesElement = noGradesElement
     }
     updateGrades(grades) {
-        var tableBody = tbl.lastElementChild
+        var tableBody = document.querySelector('tbody')
         while (tableBody.firstChild) {
-            tableBody.removeChild(tableBody.firstChild)
+        tableBody.removeChild(tableBody.firstChild)
+        }  
+        for (let i = 0; i < grades.length; i++) {
+            this.renderGradeRow(grades[i], this.deleteGrade)
         }
-        var names = null;
-        var course = null;
-        var studentGrades = null;
-        for (var i = 0; i < grades.length; i++) {
-            names = grades[i].name
-            course = grades[i].course
-            studentGrades = grades[i].grade
+        if (grades.length === 0) {
+            document.querySelector('p').classList.remove('hidden')
+        }
+    }
+    onDeleteClick(deleteGrade) {
+        this.deleteGrade = deleteGrade
+    }
+
+    renderGradeRow(data, deleteGrade) {
+        var tableBody = document.querySelector('tbody') 
+
+            var names = null;
+            var course = null;
+            var studentGrades = null;
+            var studentId = null
+            names = data.name
+            course = data.course
+            studentGrades = data.grade
+            studentId = data.id
             var trElement = document.createElement('tr')
             trElement.className = 'table-row'
             var tdElementName = document.createElement('td')
@@ -25,8 +41,24 @@ class GradeTable {
             var tdElementGrade = document.createElement('td')
             tdElementGrade.className = 'table-item grade'
             tdElementGrade.textContent = studentGrades
-            trElement.append(tdElementName, tdElementCourse, tdElementGrade)
+            var tdActions = document.createElement('td')
+            var deleteBtn = document.createElement('button')
+            deleteBtn.textContent = "DELETE"
+            deleteBtn.className = "btn btn-danger"
+            deleteBtn.addEventListener('click', function() {
+                deleteGrade(data.id)
+            })
+            tdActions.append(deleteBtn)
+            trElement.append(tdElementName, tdElementCourse, tdElementGrade, tdActions)
             tableBody.append(trElement)
-        }
+
+
+        // function deleteGrade() {
+        //     // deleteBtn.addEventListener('click', function () {
+        //     //     for (var i = 0; i < data.length; i++) {
+        //     //         console.log(data[i].id)
+        //     //     }
+        //     // })
+        // }
     }
 }
